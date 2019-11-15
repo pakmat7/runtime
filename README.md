@@ -1,10 +1,8 @@
-# Project is not maintained, use at your own risk
-
 # runtime.js
 
 [![Build Status](https://travis-ci.org/runtimejs/runtime.svg?branch=master)](https://travis-ci.org/runtimejs/runtime) [![npm](https://img.shields.io/npm/v/runtimejs.svg)](https://www.npmjs.com/package/runtimejs) [![Gem](https://img.shields.io/badge/freenode-%23runtimejs-blue.svg)](https://freenode.net/) [![Travis](https://img.shields.io/badge/GITTER-JOIN_CHAT_%E2%86%92-1dce73.svg)](https://gitter.im/runtimejs/runtime)
 
-__runtime.js__ is an open-source library operating system (unikernel) for the cloud that runs JavaScript, can be bundled up with an application and deployed as a lightweight and immutable VM image. 
+__runtime.js__ is an open-source library operating system (unikernel) for the cloud that runs JavaScript, can be bundled up with an application and deployed as a lightweight and immutable VM image.
 
 It's built on [V8 JavaScript engine](https://code.google.com/p/v8/) and uses event-driven and non-blocking I/O model inspired by [Node.js](https://nodejs.org/). At the moment [KVM](http://www.linux-kvm.org/page/Main_Page) is the only supported hypervisor.
 
@@ -45,7 +43,7 @@ Run project locally in QEMU:
 runtime start
 ```
 
-That's it, it should start and print `ok` in the console. 
+That's it, it should start and print `ok` in the console.
 
 Optionally you can let it watch directory for changes and restart QEMU automatically:
 
