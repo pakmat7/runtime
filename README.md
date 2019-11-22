@@ -10,6 +10,19 @@ It tries to be compatible with npm module ecosystem and supports some of the Nod
 
 _WARNING: project is in development and not ready for production use._
 
+### Project goals
+
+#### Short term
+- Update documentation for both the C++ kernel and the JS API and
+  modules
+- Get Tests for the JS portion working
+- Maintain what's currently here
+- Maintain build tooling for easy development
+
+#### Long term
+- Upgrade v8 to a more modern version
+- Implement threads with v8 Isolates
+
 ### Installation
 
 First thing is the command line tool `runtime-cli`, it will add `runtime` command to the shell. Type `runtime` to get full usage help.
