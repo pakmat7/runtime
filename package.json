@@ -8,7 +8,10 @@
     "postinstall": "node scripts/update-versions.js",
     "lint": "eslint js",
     "test": "runtimeify test/unit/index.js -o initrd && runtime-qemu ./initrd",
-    "test-build": "runtimeify test/unit/index.js -o initrd && runtime-qemu ./initrd --kernel ../disk/boot/runtime"
+    "test-build": "runtimeify test/unit/index.js -o initrd && runtime-qemu ./initrd --kernel ../disk/boot/runtime",
+    "build:prep": "docker build -t runtimejs .",
+    "build:kernel": "docker run --rm -w /mnt -v $(pwd):/mnt:rw runtimejs scons",
+    "build": "npm-run-all build:prep build:kernel"
   },
   "repository": {
     "type": "git",
@@ -25,6 +28,7 @@
     "eslint-config-airbnb-base": "^4.0.0",
     "eslint-plugin-import": "^1.10.2",
     "eslint-plugin-runtime-internal": "^1.0.0",
+    "npm-run-all": "^4.1.5",
     "tape": "^4.0.0"
   },
   "runtimejs": {

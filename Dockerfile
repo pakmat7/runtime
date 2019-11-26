@@ -8,7 +8,7 @@ RUN pacman --quiet -S --noconfirm scons
 RUN pacman --quiet -S --noconfirm libunistring
 RUN cd home && curl ftp://gcc.gnu.org/pub/gcc/releases/gcc-4.9.1/gcc-4.9.1.tar.gz | tar xz
 RUN cd home && curl ftp://gcc.gnu.org/pub/binutils/releases/binutils-2.24.tar.gz | tar xz
-RUN cd home && curl http://flatassembler.net/fasm-1.71.17.tgz | tar xz
+RUN cd home && curl http://flatassembler.net/fasm-1.73.18.tgz | tar xz
 RUN cd home && mkdir cross
 
 ENV PREFIX /home/cross
