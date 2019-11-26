@@ -9,8 +9,8 @@
     "lint": "eslint js",
     "test": "runtimeify test/unit/index.js -o initrd && runtime-qemu ./initrd",
     "test-build": "runtimeify test/unit/index.js -o initrd && runtime-qemu ./initrd --kernel ../disk/boot/runtime",
-    "build:prep": "docker build -t runtimejs .",
-    "build:kernel": "docker run --rm -w /mnt -v $(pwd):/mnt:rw runtimejs scons",
+    "build:prep": "docker build . -t runtimejs -f Dockerfile.build",
+    "build:scons": "docker run --rm -w /mnt -v $(pwd):/mnt:rw runtimejs scons",
     "build": "npm-run-all build:prep build:kernel"
   },
   "repository": {
