@@ -11,7 +11,7 @@
     "test-build": "runtimeify test/unit/index.js -o initrd && runtime-qemu ./initrd --kernel ../disk/boot/runtime",
     "build:prep": "docker build . -t runtimejs -f Dockerfile.build",
     "build:scons": "docker run --rm -w /mnt -v $(pwd):/mnt:rw runtimejs scons",
-    "build": "npm-run-all build:prep build:kernel"
+    "build": "npm-run-all build:prep build:scons"
   },
   "repository": {
     "type": "git",
