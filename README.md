@@ -70,6 +70,26 @@ There are two main components: operating system kernel and a <a href="https://ww
 
 The kernel is written in C++ and manages low-level resources like CPU and memory, runs JavaScript using embedded V8 engine. Library drives the entire system and manages hardware devices (usually virtualized by hypervisor).
 
+## Building the Kernel
+
+Build the initial Docker image used for building the kernel, and build
+the kernel.
+```
+npm run build
+```
+
+To build the kernel in stages, assemble the Docker image used for
+building.
+```
+npm run prebuild
+```
+
+The kernel can be built without needing to run the prebuild step every
+time now.
+```
+npm run scons
+```
+
 ## Docs
 
 [API docs](https://github.com/runtimejs/runtime/wiki/API-docs)
